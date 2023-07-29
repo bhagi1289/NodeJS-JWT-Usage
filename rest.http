@@ -1,0 +1,36 @@
+GET http://localhost:5000/
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTAyMTg0MDgsImV4cCI6MTY5MDIxODQzOCwiYXVkIjoiNjRiZDJiMjM3MzAyY2IwNTdkYzZkMTMwIiwiaXNzIjoiYmhhZ3lhcmFqdS5jby5pbiJ9.EqbkDeXi6ompHko1S5_A70XviXbaIHd_bym5IwBHI2Y
+###
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "email":"bhagiyuyu@gmail.com",
+    "password":"1234"
+}
+
+###Register Route
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "email":"bhagiyuyu@gmail.com",
+    "password":"1234"
+}
+
+### Refresh token
+POST http://localhost:5000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTA2NDc1NzgsImV4cCI6MTY5MDY0NzYwOCwiYXVkIjoiNjRiZDJiMjM3MzAyY2IwNTdkYzZkMTMwIiwiaXNzIjoiYmhhZ3lhcmFqdS5jby5pbiJ9.UVOixHMB7xMFd3pysX1iVKsoKfOHSqm-c38p4fc71b4"
+}
+
+###Logout
+DELETE http://localhost:5000/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTA2NDc5NDIsImV4cCI6MTcyMjIwNTU0MiwiYXVkIjoiNjRiZDJiMjM3MzAyY2IwNTdkYzZkMTMwIiwiaXNzIjoiYmhhZ3lhcmFqdS5jby5pbiJ9.8hSMEGoIrQatN2PSrOYENranmOrI82U4zJxRbobZNI4"
+}
+
